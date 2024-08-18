@@ -1,0 +1,38 @@
+<header>
+<div class="nav-bar">
+
+{{ with This.header }}
+
+<a href="/"><img src="{{ .logo.src }}" alt="logo" width="{{ .logo.width }}" height="{{ .logo.height }}"/></a>
+{{ .title }}
+<div style="margin: 0 auto"></div>
+<nav style="display: flex; flex-direction: row; gap: 10px; align-items: center">
+
+{{ range .nav }}
+<a
+{{ if strings.HasPrefix .link "https://" }}
+target="_blank" class="nav-item nav-item-link-external" href="{{ .link }}"
+{{ else }}
+class="nav-item nav-item-link" href="{{ .root }}/{{ .lang }}/{{ .link }}"
+{{ end }}
+>{{ .title }}</a>
+{{ end }}
+
+{{ end }}
+
+<div class="dropdown">
+<span class="icon-button material-symbols-outlined">translate</span>
+<div class="dropdown-content" style="display: flex; flex-direction: column; gap: 2px; right: 0">
+{{ range .locales }}
+{{ $path := path.Join This.root .locale (strings.TrimPrefix api.Attr.unitBase (path.Join This.root This.lang)) }}
+<a class="list-link" style="display: flex; flex-direction: row" href="{{ $path }}">{{ .title }}<span style="margin: auto; min-width: 50px"></span>{{ .locale }}</a>
+{{ end }}
+</div>
+</div>
+
+<span onclick="toggleDarkMode()" id="button-dark-mode-toggle" class="icon-button material-symbols-outlined"></span>
+<label class="check-element"><input type="checkbox" id="sidenav-show"/><span class="icon-button material-symbols-outlined" onclick="setSidenavVisible()" onload="setSidenavVisible()">format_list_bulleted</span></label>
+
+</nav>
+</div>
+</header>

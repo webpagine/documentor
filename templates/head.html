@@ -1,0 +1,18 @@
+<link rel="icon" type="image/png" href="{{ .icon }}"/>
+<link rel="stylesheet" href="{{ api.Attr.templateBase }}/css/base.css"/>
+<link rel="stylesheet" href="{{ api.Attr.templateBase }}/css/vs2015.min.css">
+<script type="text/javascript" src="{{ api.Attr.templateBase }}/script/doc.js"></script>
+<script type="text/javascript" src="{{ api.Attr.templateBase }}/script/highlight.min.js"></script>
+
+{{ if .features.mathjax }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{{ end }}
+
+{{ api.Apply "com.github.webpagine.darkmode" "head" This }}
+
+{{ range .link }}<link rel="{{ .rel }}" href="{{ .href }}"/>{{ end }}
+{{ template "debug.html" }}
+
+<script type="text/javascript">
+function init() { hljs.highlightAll(); initDarkMode(); initDoc() }
+</script>

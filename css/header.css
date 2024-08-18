@@ -1,0 +1,80 @@
+header {
+    margin: 0;
+
+    position: sticky;
+    top: 0;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.theme-light header {
+    background-color: white;
+}
+
+.theme-dark header {
+    background-color: #1a1a1e;
+}
+
+.nav-bar {
+    padding: 10px 100px;
+
+    user-select: none;
+
+    font-family: "Noto Sans", serif;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 30px 0 0;
+}
+
+.nav-item-link {
+    font-weight: bolder;
+    text-decoration: none;
+
+    transition-duration: 200ms;
+}
+
+.theme-light .nav-item-link {
+    color: black;
+}
+
+.theme-light .nav-item-link:hover {
+    color: gray;
+}
+
+.theme-dark .nav-item-link {
+    color: white;
+}
+
+.theme-dark .nav-item-link:hover {
+    color: lightgray;
+}
+
+.nav-item-link-external {
+    border-radius: 30px;
+
+    font-weight: bolder;
+    text-decoration: none;
+
+    transition-duration: 200ms;
+}
+
+.theme-light a.nav-item-link-external {
+    color: black;
+}
+
+.theme-light a.nav-item-link-external:hover {
+    color: gray;
+}
+
+.theme-dark a.nav-item-link-external {
+    color: white;
+}
+
+.theme-dark a.nav-item-link-external:hover {
+    color: lightgray;
+}

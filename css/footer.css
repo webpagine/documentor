@@ -1,0 +1,29 @@
+.footer {
+    margin: 0;
+    padding: 20px;
+
+    color: gray;
+
+    img {
+        filter: invert(50%);
+    }
+
+    a {
+        margin-top: 10px;
+
+        color: gray;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.theme-light .footer {
+    background-color: #eee;
+}
+
+.theme-dark .footer {
+    background: #111;
+}

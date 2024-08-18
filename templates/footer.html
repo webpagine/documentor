@@ -1,0 +1,16 @@
+<div class="footer">
+<div class="footer-row">
+
+<div style="text-align: center">
+{{ with .footer.copyright }}
+<p>{{ .license }}</p>
+<p style="font-weight: bold">&copy; Copyright {{ .date }} {{ .owner }}</p>
+{{ end }}
+Documentation built with <a target="_blank" style="font-weight: bold" href="https://github.com/webpagine/documentor">Documentor</a> and
+<a target="_blank" href="https://pagine.symboltics.com">
+<img style="vertical-align: text-top" src="{{ api.Attr.templateBase }}/img/pagine_mono.svg" height="30px" alt="pagine"/>
+</a>
+</div>
+
+</div>
+</div>

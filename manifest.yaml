@@ -1,0 +1,17 @@
+manifest:
+  canonical: "com.github.webpagine.documentor"
+  std: "v1"
+  depends:
+    - "com.github.webpagine.darkmode"
+  patterns:
+    - "/templates/*"
+
+templates:
+  - export: "doc.html"
+    name: "doc"
+
+  - export: "locale.html"
+    name: "locale"
+
+  - export: "redirect.html"
+    name: "redirect"

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ES2023"],
+    "module": "system",
+
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "doc.js",
+  },
+  "include": ["src/*.ts"],
+}

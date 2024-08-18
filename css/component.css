@@ -1,0 +1,128 @@
+.button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    font-family: "Noto Sans", serif;
+    font-weight: bolder;
+
+    text-decoration: none;
+
+    transition-duration: 200ms;
+}
+
+.button-filled {
+    color: white !important;
+
+    background-color: #ff336a !important;
+}
+
+.button-filled:hover {
+    background-color: #f58 !important;
+}
+
+.theme-light .button {
+    color: black;
+    background-color: #ddd;
+}
+
+.theme-light .button:hover {
+    background-color: #ccc;
+}
+
+.theme-dark .button {
+    color: lightgray;
+    background-color: #2a2a2e;
+}
+
+.theme-dark .button:hover {
+    background-color: black;
+}
+
+.icon-button {
+    padding: 10px;
+    border-radius: 100%;
+
+    transition-duration: 200ms;
+}
+
+.theme-light .icon-button:hover {
+    background-color: lightgray;
+}
+
+.theme-dark .icon-button:hover {
+    background-color: #2a2a2e;
+}
+
+.check-element input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.theme-light .check-element input:checked ~ .icon-button {
+    background-color: lightgray;
+}
+
+.theme-dark .check-element input:checked ~ .icon-button {
+    background-color: #2a2a2e;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    visibility: hidden;
+
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    opacity: 0;
+    transition-duration: 200ms;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+}
+
+.theme-light .dropdown-content a {
+    color: black;
+}
+
+.theme-dark .dropdown-content a {
+    color: white;
+}
+
+.theme-light .dropdown-content {
+    background-color: white;
+}
+
+.theme-dark .dropdown-content {
+    background-color: #2a2a2e;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.list-link {
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    transition-duration: 200ms;
+}
+
+.theme-light .list-link:hover {
+    background-color: lightgray;
+}
+
+.theme-dark .list-link:hover {
+    background-color: #1a1a1e;
+}

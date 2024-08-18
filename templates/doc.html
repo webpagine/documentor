@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .lang }}">
+<head>
+<title>{{ .title }}</title>
+{{ template "head.html" . }}
+</head>
+<body class="theme-{{ .theme }}" onload="init()">
+{{ template "header.html" . }}
+<div style="min-height: 100%; display: flex; flex-direction: row">
+<main class="content">{{ render.FileByExtName .content }}</main>
+<div id="sidenav"></div>
+</div>
+{{ template "footer.html" . }}
+</body>
+</html>

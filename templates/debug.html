@@ -1,0 +1,1 @@
+{{ if api.Attr.isServing }}<script>new WebSocket('ws://' + window.location.host + "/ws").onclose = (_) => { location.reload() }</script>{{ end }}

@@ -1,0 +1,17 @@
+@import "component.css";
+@import "doc.css";
+@import "footer.css";
+@import "header.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans");
+
+body {
+    font-family: "Noto Sans", serif;
+    margin: 0;
+
+    transition-duration: 200ms;
+}
+
+.theme-dark {
+    color: white;
+    background-color: #1a1a1e;
+}

@@ -1,0 +1,26 @@
+<html lang="{{ .lang }}">
+<head>
+<title>Localization</title>
+{{ template "head.html" .head }}
+<script>
+switch (navigator.language.split("-")[0]) {
+{{ range .locales }}
+case "{{ .locale }}": window.location.href = "{{ .locale }}";
+{{ end }}
+}
+</script>
+</head>
+<body class="theme-{{ .theme }}" onload="init()">
+{{ template "header.html" . }}
+<div style="height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 1vh; text-align: center">
+<div style="height: 10vh"></div>
+<h1>We didn't match your locale. Choose your language.</h1>
+<div style="display: flex; flex-direction: column; gap: 10px">
+{{ range .locales }}
+<a class="button" style="min-width: 200px" href="/{{ .locale }}">{{ .title }}</a>
+{{ end }}
+</div>
+</div>
+{{ template "footer.html" . }}
+</body>
+</html>
